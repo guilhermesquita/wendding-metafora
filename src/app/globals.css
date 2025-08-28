@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -10,13 +11,23 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-primary: "Great Vibes", cursive;
+  --font-secondary: "Lora", serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #E9E9E9;
     --foreground: #ededed;
   }
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 body {

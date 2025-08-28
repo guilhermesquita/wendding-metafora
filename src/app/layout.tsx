@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Libre_Bodoni, Great_Vibes, Lora } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +10,25 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const libreBodoni = Libre_Bodoni({
+  variable: "--font-libre-bodoni",
+  subsets: ["latin"],
+  weight: ["400", "700"], 
+});
+
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
+  subsets: ["latin"],
+  weight: ["400"], 
+});
+
+
+const lora = Lora({
+  variable: "--font-lora",
+  subsets: ["latin"],
+  weight: ["400"], 
 });
 
 export const metadata: Metadata = {
@@ -25,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${greatVibes.variable} ${lora.variable} ${libreBodoni.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

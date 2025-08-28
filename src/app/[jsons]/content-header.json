@@ -1,0 +1,14 @@
+[
+    {
+        "directTo": "#location",
+        "title": "Localização"
+    },
+    {
+        "directTo": "#confirm",
+        "title": "Confirme sua presença"
+    },
+    {
+        "directTo": "#help",
+        "title": "Abençoe esse casamento"
+    }
+]
