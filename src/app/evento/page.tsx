@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -6,9 +7,12 @@ const Page = () => {
       {/* Título */}
       <h1 className="text-3xl font-bold">Detalhes do Casamento</h1>
 
-      <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+      <Link
+        className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+        href="https://lista.havan.com.br/Convidado/ItensListaPresente/857422" target="_blank"
+      >
         <Image
-          src="/teste.png"
+          src="/IMG_9767.jpg"
           alt={"sasa"}
           className="absolute inset-0 h-full w-full object-cover"
           fill
@@ -22,7 +26,7 @@ const Page = () => {
         <div className="z-10 gap-y-1 overflow-hidden text-sm leading-6 text-gray-300 text-caption">
           clique aqui e tenha acesso a nossa lista
         </div>
-      </article>
+      </Link>
 
       <section>
         <h2 className="text-xl font-semibold mb-2">
@@ -39,39 +43,6 @@ const Page = () => {
           referrerPolicy="no-referrer-when-downgrade"
           style={{ pointerEvents: "none" }}
         ></iframe>
-      </section>
-
-      <section>
-        <h2 className="text-xl font-semibold mb-2">
-          🍵 Localização do Chá de Noivos
-        </h2>
-        <p className="mb-2">
-          Condomínio Ideal Torquato, Av. Torquato Tapajós, 11.901 - Tarumã Açu,
-          Manaus - AM, 69023-003
-        </p>
-        <iframe
-          className="w-full h-64 rounded-lg"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.382365109831!2d-60.03180007686664!3d-2.991219801946587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1784c0dbf113%3A0x1860fbf792d5136f!2sIdeal%20condominium%20Torquato!5e0!3m2!1sen!2sbr!4v1754966481588!5m2!1sen!2sbr"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          style={{ pointerEvents: "none" }}
-        ></iframe>
-      </section>
-
-      {/* Lista de presentes */}
-      <section>
-        <h2 className="text-xl font-semibold mb-2">🎁 Lista de Presentes</h2>
-        <p className="mt-2">
-          Veja a lista completa{" "}
-          <a
-            href="https://www.sualista.com/casamento"
-            className="text-blue-500 underline"
-            target="_blank"
-          >
-            clicando aqui
-          </a>
-          .
-        </p>
       </section>
 
       {/* QR Code para Pix */}

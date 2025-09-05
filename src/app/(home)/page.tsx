@@ -16,7 +16,7 @@ export default function Home() {
         <main className="min-h-screen bg-primary text-white text-center p-6">
           <div className="w-full flex flex-col items-center">
             <div className="w-[80%] flex justify-between">
-              <p className="underline text-black font-primary text-2xl">
+              <p className="underline text-black font-primary text-2xl cursor-pointer">
                 16.09.2025
               </p>
               <Link

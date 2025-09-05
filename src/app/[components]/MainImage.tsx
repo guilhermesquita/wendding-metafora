@@ -61,7 +61,7 @@ const MainImage = () => {
     <>
       <div className="relative h-[400px] w-[80%] mx-auto px-5 py-8 group bg-black overflow-hidden shadow-xl cursor-pointer">
         <Image
-          src="/teste.png"
+          src="/mainImage.jpg"
           alt="Standard Plan Card"
           fill
           className="object-cover"
@@ -86,8 +86,8 @@ const MainImage = () => {
       {isOpen && (
         <div className="fixed inset-0  bg-opacity-50 flex justify-center items-center z-50">
           {!confirmed ? (
-            <div className="bg-white rounded-lg p-6 w-[40%] shadow-lg">
-              <h2 className="text-xl text-black font-bold mb-4 text-center">
+            <div className="bg-white rounded-lg p-6 w-[100%] sm:w-[90%] md:w-[70%] lg:w-[48%] shadow-lg">
+              <h2 className="text-lg sm:text-xl md:text-2xl text-black font-bold mb-4 text-center">
                 Digite o seu código
               </h2>
 
@@ -95,32 +95,41 @@ const MainImage = () => {
                 value={otp}
                 onChange={setOtp}
                 numInputs={6}
-                renderSeparator={<span className="mx-2 text-xl">-</span>}
-                containerStyle="flex justify-center"
+                renderSeparator={
+                  <span className="mx-1 sm:mx-2 text-lg sm:text-xl">-</span>
+                }
+                containerStyle="flex justify-center gap-2 sm:gap-3 overflow-hidden"
                 skipDefaultStyles
                 inputType="text"
                 renderInput={(props) => (
                   <input
                     {...props}
-                    className="w-14 h-14 border border-gray-300 text-black rounded-md text-center text-lg focus:outline-none focus:border-red-500"
+                    className="
+        w-8 h-10 
+        sm:w-10 sm:h-12 
+        md:w-12 md:h-14 
+        border border-gray-300 text-black rounded-md 
+        text-center text-sm sm:text-base md:text-lg 
+        focus:outline-none focus:border-red-500
+      "
                   />
                 )}
               />
 
-              <div className="flex justify-center gap-3 mt-6">
+              <div className="flex flex-col sm:flex-row justify-center gap-3 mt-6">
                 <button
                   onClick={() => {
                     setOtp("");
                     setIsOpen(false);
                   }}
-                  className="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400 cursor-pointer"
+                  className="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400 cursor-pointer w-full sm:w-auto"
                 >
                   Cancelar
                 </button>
                 <button
                   onClick={handleVerify}
                   disabled={otp.length < 6}
-                  className="px-4 py-2 rounded bg-[#7A0505] text-white hover:bg-red-900 cursor-pointer"
+                  className="px-4 py-2 rounded bg-[#7A0505] text-white hover:bg-red-900 cursor-pointer w-full sm:w-auto"
                 >
                   Confirmar
                 </button>
